@@ -16,6 +16,3 @@
 [submodule "third_party/loose_quadtree"]
 	path = third_party/loose_quadtree
 	url = https://github.com/gerazo/loose_quadtree.git
-[submodule "third_party/EASTL"]
-	path = third_party/EASTL
-	url = https://github.com/electronicarts/EASTL.git
