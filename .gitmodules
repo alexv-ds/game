@@ -16,3 +16,9 @@
 [submodule "third_party/loose_quadtree"]
 	path = third_party/loose_quadtree
 	url = https://github.com/gerazo/loose_quadtree.git
+[submodule "third_party/uvw"]
+	path = third_party/uvw
+	url = https://github.com/skypjack/uvw.git
+[submodule "third_party/libuv"]
+	path = third_party/libuv
+	url = https://github.com/libuv/libuv.git
