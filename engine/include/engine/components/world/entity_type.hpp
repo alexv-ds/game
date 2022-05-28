@@ -2,6 +2,6 @@
 
 namespace engine::components::world {
 
-struct Square {};
+struct WorldSquareObject {};
 
 }

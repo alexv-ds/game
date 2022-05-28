@@ -20,6 +20,8 @@ find_package(LODEPNG REQUIRED)
 find_package(LOOSEQUADTREE REQUIRED)
 find_package(SPDLOG REQUIRED)
 find_package(UVW REQUIRED)
+find_package(CONCURRENTQUEUE REQUIRED)
+
 
 add_subdirectory(engine)
 add_subdirectory(game)

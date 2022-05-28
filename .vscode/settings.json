@@ -79,6 +79,11 @@
     "xstring": "cpp",
     "xtr1common": "cpp",
     "xtree": "cpp",
-    "xutility": "cpp"
+    "xutility": "cpp",
+    "csignal": "cpp",
+    "future": "cpp",
+    "queue": "cpp",
+    "stack": "cpp",
+    "unordered_set": "cpp"
   }
 }

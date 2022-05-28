@@ -17,8 +17,9 @@ uv_loop::uv_loop(flecs::world& world) {
       .multi_threaded(false)
       .each([](flecs::entity entity, components::uv_loop::Loop& loop) {
         components::uv_loop::Loop::Task task = nullptr;
+        flecs::world world = entity.world();
         while (loop.task_queue->try_dequeue(task)) {
-          task(*loop.loop);
+          task(world, *loop.loop);
         }
         loop.loop->run<uvw::Loop::Mode::NOWAIT>();
       });
@@ -26,7 +27,8 @@ uv_loop::uv_loop(flecs::world& world) {
 
   world.set<components::uv_loop::Loop>({
     .task_queue = std::make_shared<moodycamel::ConcurrentQueue<components::uv_loop::Loop::Task>>(),
-    .loop = uvw::Loop::create()
+    .loop = uvw::Loop::create(),
+    .loop_mutex = std::make_shared<std::recursive_mutex>()
   });
 
 

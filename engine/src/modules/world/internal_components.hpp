@@ -12,6 +12,7 @@ struct WorldConroller {
   std::shared_ptr<module_impl::world::IQuadTree> tree;
 };
 
-
+struct TreeObject {};
+struct UpdateTreeObject {};
 
 };
